@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#15315A">
+<meta name="description" content="외국인 유학생 시간제취업허가 가이드 · Part-time Work Permit Guide">
+<title>시간제취업허가 가이드 · Part-time Work Permit Guide</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif+KR:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --brand:#15315A; --on-brand:#ffffff; --on-brand-2:#c8d4e4; --on-brand-3:#e2d3a6; --gold-on-brand:#D6B25A;
+  --paper:#FBF8F0; --card:#FFFFFF; --sunk:#F4EFE0;
+  --ink:#1d1b16; --ink2:#46423a; --ink3:#6a655b;
+  --line:#D9CFAE; --line2:#EAE2C8;
+  --head:#15315A; --gold:#B08A2E; --gold-ink:#7E5C13;
+  --ok:#2F6F47; --ok-bg:#E3EFE6; --warn:#9A4A06; --warn-bg:#FDF1DC;
+  --bad:#9B2C2C; --bad-bg:#FBEBEB; --info-bg:#EAF0F8;
+ color-scheme:light;
+  box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --brand:#15315A; --on-brand:#ffffff; --on-brand-2:#c8d4e4; --on-brand-3:#e2d3a6; --gold-on-brand:#D6B25A;
+  --paper:#10151d; --card:#172030; --sunk:#131b28;
+  --ink:#eceae3; --ink2:#c9c6bd; --ink3:#9b9c98;
+  --line:#3a4356; --line2:#2a3345;
+  --head:#b9cdf0; --gold:#D6B25A; --gold-ink:#E2C47A;
+  --ok:#7cc499; --ok-bg:#17301f; --warn:#f0b566; --warn-bg:#33240f;
+  --bad:#f19a9a; --bad-bg:#3a1a1a; --info-bg:#172b47;
+ color-scheme:dark;}}
+:root[data-theme="dark"]{
+  --brand:#15315A; --on-brand:#ffffff; --on-brand-2:#c8d4e4; --on-brand-3:#e2d3a6; --gold-on-brand:#D6B25A;
+  --paper:#10151d; --card:#172030; --sunk:#131b28;
+  --ink:#eceae3; --ink2:#c9c6bd; --ink3:#9b9c98;
+  --line:#3a4356; --line2:#2a3345;
+  --head:#b9cdf0; --gold:#D6B25A; --gold-ink:#E2C47A;
+  --ok:#7cc499; --ok-bg:#17301f; --warn:#f0b566; --warn-bg:#33240f;
+  --bad:#f19a9a; --bad-bg:#3a1a1a; --info-bg:#172b47;
+ color-scheme:dark;}
+*{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+html{-webkit-text-size-adjust:100%;text-size-adjust:100%;scroll-behavior:smooth;scroll-padding-top:env(safe-area-inset-top,0px);background:var(--paper)}
+body{background:var(--paper);color:var(--ink);font-family:-apple-system,BlinkMacSystemFont,"Apple SD Gothic Neo","Pretendard","Noto Sans KR","Malgun Gothic","Segoe UI",Roboto,sans-serif;
+  font-size:15px;line-height:1.65;word-break:keep-all;overflow-wrap:break-word}
+.serif{font-family:"Noto Serif KR","Nanum Myeongjo","Apple Myungjo","Batang",serif}
+button{font:inherit;color:inherit;background:none;border:0;text-align:left;cursor:pointer;touch-action:manipulation}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--gold);outline-offset:2px}
+b,strong{font-weight:700}
+
+/* language: JS 없이 열면(미리보기 등) 한·영 모두 보임 */
+html[data-lang="ko"] .en{display:none}
+html[data-lang="en"] .ko{display:none}
+/* JS가 막힌 미리보기(iOS 첨부 미리보기 등): 라디오+라벨로 전환, 기본은 한글만 */
+.lgr{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.lgl{display:none}
+html:not(.js) .lang button{display:none}
+html:not(.js) .lgl{display:flex}
+html:not(.js) .en{display:none}
+html:not(.js) #lg-en:checked ~ .page .en{display:inline}
+html:not(.js) #lg-en:checked ~ .page .ko{display:none}
+.lgl label{min-width:44px;height:34px;margin:5px 0;display:flex;align-items:center;justify-content:center;font-size:12.5px;font-weight:700;color:var(--on-brand-2);border:1px solid rgba(255,255,255,.4);cursor:pointer}
+.lgl label:first-child{border-radius:99px 0 0 99px}
+.lgl label:last-child{border-radius:0 99px 99px 0;border-left:0}
+#lg-ko:checked ~ .page label[for="lg-ko"],#lg-en:checked ~ .page label[for="lg-en"]{background:#fff;border-color:#fff;color:var(--brand)}
+
+.page{max-width:640px;margin:0 auto;background:var(--paper)}
+
+/* HERO */
+.hero{position:relative;background:var(--brand);color:var(--on-brand);overflow:hidden;
+  margin-top:calc(-1 * env(safe-area-inset-top,0px));padding:calc(22px + env(safe-area-inset-top,0px)) 20px 22px}
+.kicker{font-size:12.5px;font-weight:600;color:var(--on-brand-3);margin-bottom:12px;max-width:calc(100% - 96px);line-height:1.5}
+.hero h1{font-size:29px;line-height:1.2;font-weight:700;letter-spacing:-.01em;max-width:calc(100% - 20px)}
+.hero .sub{margin-top:10px;color:var(--on-brand-2);font-size:14px;max-width:32em}
+.stamp{position:absolute;top:calc(18px + env(safe-area-inset-top,0px));right:16px;width:78px;height:78px;border:1.5px solid rgba(214,178,90,.75);border-radius:50%;
+  display:grid;place-content:center;text-align:center;font-size:11.5px;line-height:1.35;color:var(--gold-on-brand)}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:16px}
+.chip{font-size:12px;padding:3px 10px;border-radius:99px;border:1px solid rgba(255,255,255,.25);color:var(--on-brand-3)}
+
+/* NAV */
+.snav{position:sticky;top:env(safe-area-inset-top,0px);z-index:50;display:flex;background:var(--brand);border-bottom:2px solid var(--gold-on-brand)}
+.snav-links{flex:1;min-width:0;display:flex;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch}
+.snav-links::-webkit-scrollbar{display:none}
+.snav-links a{flex:none;padding:13px 12px 11px;font-size:13.5px;font-weight:600;color:var(--on-brand-2);text-decoration:none;white-space:nowrap;border-bottom:3px solid transparent;margin-bottom:-2px}
+.snav-links a.on{color:#fff;border-bottom-color:var(--gold-on-brand)}
+.lang{flex:none;display:flex;align-items:center;padding:0 10px 0 4px}
+.lang button{min-width:40px;padding:7px 9px;text-align:center;font-size:12.5px;font-weight:700;color:var(--on-brand-2);border:1px solid rgba(255,255,255,.4)}
+.lang button:first-child{border-radius:99px 0 0 99px}
+.lang button:last-child{border-radius:0 99px 99px 0;border-left:0}
+.lang button[aria-pressed="true"]{background:#fff;border-color:#fff;color:var(--brand)}
+
+/* SECTION */
+.sec{padding:28px 16px 22px;border-bottom:1px solid var(--line2);scroll-margin-top:52px}
+.sec-h{margin-bottom:14px}
+.sec-h h2{font-size:22px;line-height:1.3;color:var(--head);font-weight:700}
+.sec-h h2 .no{color:var(--gold-ink);margin-right:6px}
+.sec-h p{font-size:14px;color:var(--ink2);margin-top:6px}
+.grp{font-size:15px;font-weight:700;color:var(--head);margin:22px 0 8px}
+
+.note{display:flex;gap:10px;padding:11px 13px;border-radius:10px;font-size:14px;line-height:1.55;margin:12px 0;background:var(--info-bg);border:1px solid var(--line2)}
+.note.warn{background:var(--warn-bg)} .note.bad{background:var(--bad-bg)}
+.note .ic{flex:none}
+
+/* SUMMARY */
+.flow{display:grid;grid-template-columns:1fr auto 1fr auto 1fr;align-items:stretch;gap:6px;margin:14px 0}
+.flow .st{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 6px;text-align:center;font-size:13.5px;font-weight:700;color:var(--head);line-height:1.35}
+.flow .st small{display:block;font-weight:500;color:var(--ink3);font-size:12px;margin-top:3px}
+.flow .ar{align-self:center;color:var(--gold-ink);font-weight:700}
+.rules{list-style:none;display:grid;gap:8px;margin-top:6px}
+.rules li{background:var(--card);border:1px solid var(--line2);border-left:4px solid var(--gold);border-radius:10px;padding:11px 13px}
+.rules li:first-child{border-left-color:var(--bad)}
+.rules li b{display:block;color:var(--head);font-size:15.5px;line-height:1.4}
+.rules li .d{display:block;font-size:14px;color:var(--ink2);margin-top:2px}
+
+/* ACCORDION CARD */
+.acc{background:var(--card);border:1px solid var(--line2);border-radius:12px;margin-bottom:8px;overflow:hidden}
+.acc.checked{border-color:var(--ok)}
+.acc.hide{display:none}
+.acc-row{display:flex;align-items:stretch}
+.chk{flex:none;width:52px;display:grid;place-items:center}
+.chk i{display:block;position:relative;width:26px;height:26px;border:2px solid var(--line);border-radius:8px;background:var(--card);transition:background .15s,border-color .15s}
+.acc.checked .chk i{background:var(--ok);border-color:var(--ok)}
+.acc.checked .chk i::after{content:"";position:absolute;left:7px;top:2px;width:6px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+.acc-head{flex:1;min-width:0;display:flex;align-items:center;gap:10px;padding:12px 14px 12px 0;min-height:58px}
+.acc-head.nochk{padding-left:14px}
+.acc-t{flex:1;min-width:0}
+.acc-t .t{display:block;font-weight:700;color:var(--head);font-size:15.5px;line-height:1.4}
+.acc-t .t .qn{color:var(--gold-ink);margin-right:6px}
+.acc-t .s{display:block;font-size:13px;color:var(--ink3);line-height:1.5;margin-top:2px}
+.tags{display:flex;flex-wrap:wrap;gap:4px;margin-top:6px}
+.tg{font-size:12px;font-weight:600;padding:1px 8px;border-radius:5px;background:var(--sunk);color:var(--ink2);border:1px solid var(--line2)}
+.tg.req{background:var(--brand);border-color:var(--brand);color:#fff}
+.tg.cond{background:var(--warn-bg);border-color:transparent;color:var(--warn)}
+.tg.who{background:var(--info-bg);color:var(--head)}
+.chev{flex:none;width:9px;height:9px;border:solid var(--ink3);border-width:0 2px 2px 0;transform:rotate(45deg);margin:-3px 4px 0 0;transition:transform .2s}
+.acc.open .chev{transform:rotate(-135deg);margin-top:3px}
+.acc-body{border-top:1px solid var(--line2);padding:12px 14px 14px;font-size:14px}
+.js .acc:not(.open) .acc-body{display:none}
+.acc-body p+p{margin-top:6px}
+
+.cond{display:flex;gap:8px;align-items:baseline;margin:7px 0}
+.cond .l{flex:none;font-size:12px;font-weight:700;padding:1px 7px;border-radius:5px;background:var(--brand);color:#fff}
+.cond .v.ok{color:var(--ok);font-weight:700}.cond .v.warn{color:var(--warn);font-weight:700}.cond .v.bad{color:var(--bad);font-weight:700}
+.kv{margin-top:10px}
+.kv .k{display:block;font-size:12.5px;font-weight:700;margin-bottom:1px;color:var(--gold-ink)}
+.kv.bad .k{color:var(--bad)} .kv.ok .k{color:var(--ok)}
+.kv.bad,.kv.ok{padding:8px 11px;border-radius:9px}
+.kv.bad{background:var(--bad-bg)} .kv.ok{background:var(--ok-bg)}
+
+/* PROGRESS / TOOLS */
+.prog{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:11px 14px;margin:14px 0 8px}
+.prog .row{display:flex;align-items:center;gap:12px}
+.bar{flex:1;height:8px;background:var(--line2);border-radius:99px;overflow:hidden}
+.bar i{display:block;height:100%;width:0;background:var(--gold);border-radius:99px;transition:width .3s}
+.prog.done .bar i{background:var(--ok)}
+.cnt{font-weight:800;color:var(--head);font-variant-numeric:tabular-nums;min-width:48px;text-align:right}
+.prog .msg{font-size:13px;color:var(--ink2);margin-top:6px}
+.tools{display:flex;justify-content:flex-end;gap:16px;margin:0 2px 6px}
+.lnk{font-size:13px;color:var(--gold-ink);font-weight:600;padding:8px 0;text-decoration:underline;text-underline-offset:3px}
+
+/* HOURS */
+.hcard{background:var(--card);border:1px solid var(--line);border-radius:12px;margin-bottom:12px;overflow:hidden}
+.hcard-h{padding:12px 14px;background:var(--sunk);border-bottom:1px solid var(--line2)}
+.hcard-h .name{font-weight:700;color:var(--head);font-size:16.5px}
+.hcard-h .name .tg{margin-left:6px;vertical-align:2px}
+.hreq{padding:10px 14px;font-size:13.5px;color:var(--ink2);border-bottom:1px solid var(--line2)}
+.hreq div{margin:2px 0}
+.hsub{padding:10px 14px 0;font-size:13px;font-weight:700;color:var(--ok)}
+.hg{width:100%;border-collapse:collapse;text-align:center}
+.hg thead th{font-size:12.5px;font-weight:600;color:var(--ink3);padding:8px 6px 2px}
+.hg tbody th{text-align:left;padding-left:14px;font-size:13px;font-weight:600;color:var(--ink2);white-space:nowrap}
+.hg td{font-size:24px;font-weight:800;color:var(--head);padding:8px 6px 10px;font-variant-numeric:tabular-nums}
+.hg td small{font-size:13px;font-weight:700}
+.hg td.unl{color:var(--gold-ink);font-size:17px}
+.hlow{padding:10px 14px;background:var(--bad-bg);color:var(--bad);font-size:13.5px;font-weight:600}
+
+/* DOC FILTER */
+.filt{display:flex;gap:8px;margin:12px 0 4px}
+.fb{padding:9px 16px;border-radius:99px;border:1.5px solid var(--line);font-size:14px;font-weight:600;color:var(--ink2);background:var(--card);text-align:center}
+.fb[aria-pressed="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+
+/* STEPS */
+.sn{flex:none;width:32px;height:32px;border-radius:50%;background:var(--brand);color:var(--gold-on-brand);font-weight:800;display:grid;place-items:center;font-size:15px}
+.blk{margin-top:12px}
+.blk:first-child{margin-top:0}
+.blk .k{font-size:12.5px;font-weight:700;color:var(--head);margin-bottom:2px}
+.blk.err,.blk.tip{padding:9px 11px;border-radius:9px}
+.blk.err{background:var(--bad-bg)} .blk.err .k{color:var(--bad)}
+.blk.tip{background:var(--ok-bg)} .blk.tip .k{color:var(--ok)}
+.ml{margin:6px 0 0 18px;font-size:14px}
+.ml li{margin:2px 0}
+.tabs{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:12px 0}
+.tab{padding:11px 8px;border:1.5px solid var(--line);border-radius:10px;font-weight:700;font-size:14px;text-align:center;background:var(--card);color:var(--ink2)}
+.tab[aria-selected="true"]{background:var(--brand);border-color:var(--brand);color:#fff}
+.js .pane:not(.active){display:none}
+.sub{list-style:none;counter-reset:s}
+.sub li{counter-increment:s;position:relative;padding:0 0 14px 36px}
+.sub li::before{content:counter(s);position:absolute;left:0;top:0;width:26px;height:26px;border-radius:50%;background:var(--sunk);border:1px solid var(--line);font-size:13px;font-weight:700;color:var(--head);display:grid;place-items:center}
+.sub li b{display:block;color:var(--head)}
+.mini{font-size:13px;margin-top:4px;line-height:1.5}
+.mini.err{color:var(--bad)} .mini.tip{color:var(--ok)}
+
+/* BANS / PENALTIES */
+.ban{display:grid;gap:6px}
+.ban .it{background:var(--card);border:1px solid var(--line2);border-left:4px solid var(--bad);border-radius:10px;padding:10px 12px}
+.ban .it b{display:block;color:var(--bad);font-size:15px}
+.ban .it .e{display:block;font-size:13.5px;color:var(--ink2);margin-top:1px}
+.ban .it .x{display:inline-block;margin-top:6px;background:var(--bad);color:#fff;font-size:12.5px;font-weight:700;padding:2px 9px;border-radius:6px}
+.pen{background:var(--card);border:1px solid var(--line2);border-radius:12px;padding:12px 14px;margin-bottom:8px}
+.pen.hot{border-color:var(--bad);background:var(--bad-bg)}
+.pen .who{display:inline-block;font-size:12px;font-weight:700;padding:1px 8px;border-radius:5px;background:var(--brand);color:#fff;margin-bottom:6px}
+.pen .who.emp{background:var(--gold);color:#1d1b16}
+.pen .t{font-weight:700;color:var(--head);font-size:15px;line-height:1.4}
+.pen .r{margin-top:3px;font-size:14px}
+.pen .e{margin-top:4px;font-size:13px;color:var(--ink3)}
+
+/* FOOT */
+.foot{background:var(--brand);color:var(--on-brand-2);padding:24px 18px 30px;font-size:13.5px;line-height:1.6}
+.foot b{color:#fff}
+.foot .fine{margin-top:12px;font-size:12px;opacity:.85}
+
+/* 언어 버튼: 터치 영역 44px 이상 확보, 길게 눌러 선택/확대 방지 */
+.lang{padding:0 8px 0 2px;-webkit-user-select:none;user-select:none;-webkit-touch-callout:none}
+.lang button{min-width:44px;padding:0 10px;display:flex;align-items:center;justify-content:center;touch-action:manipulation;position:relative;z-index:1}
+.lang button:first-child{border-radius:99px 0 0 99px}
+.lang button:last-child{border-radius:0 99px 99px 0}
+.lang button{height:34px;min-height:34px;margin:5px 0}
+.lang button::after{content:"";position:absolute;left:0;right:0;top:-6px;bottom:-6px}
+/* KO/EN: 메뉴 위 별도 줄로 분리해 메뉴 글자와 겹치지 않게 */
+.snav{flex-wrap:wrap}
+.lang{order:-1;flex:0 0 100%;width:100%;justify-content:flex-end;padding:4px 10px 0}
+.lang button,.lgl label{height:28px;margin:0;font-size:12px;min-width:42px}
+.lang button::after{top:-4px;bottom:-8px}
+.snav-links{flex:1 1 100%;order:1}
+.sec{scroll-margin-top:92px}
+/* JS 없는 미리보기: 체크박스는 순수 CSS로 동작, 작동 불가 도구는 숨김 */
+.nj-c{position:absolute;opacity:0;width:0;height:0;pointer-events:none}
+.nj-l{display:none;flex:none;width:52px;place-items:center;cursor:pointer}
+.nj-l i{display:block;position:relative;width:26px;height:26px;border:2px solid var(--line);border-radius:8px;background:var(--card)}
+html:not(.js) .nj-l{display:grid}
+html:not(.js) .chk{display:none}
+html:not(.js) .nj-c:checked ~ .acc-row .nj-l i{background:var(--ok);border-color:var(--ok)}
+html:not(.js) .nj-c:checked ~ .acc-row .nj-l i::after{content:"";position:absolute;left:7px;top:2px;width:6px;height:12px;border:solid #fff;border-width:0 2.5px 2.5px 0;transform:rotate(45deg)}
+html:not(.js) .acc:has(.nj-c:checked){border-color:var(--ok)}
+html:not(.js) .tools,html:not(.js) .prog,html:not(.js) .filt,html:not(.js) .tabs,html:not(.js) .chev{display:none}
+html:not(.js) .acc-head{padding-left:0}
+html:not(.js) .acc-head.nochk{padding-left:14px}
+html.js .nj-c{display:none}
+html.switching{scroll-behavior:auto!important}
+html{overflow-anchor:none}
+
+/* TOP 버튼 */
+.totop{text-decoration:none;position:fixed;right:14px;bottom:calc(16px + env(safe-area-inset-bottom,0px));z-index:60;width:48px;height:48px;border-radius:50%;
+  background:var(--brand);color:#fff;border:1.5px solid var(--gold-on-brand);box-shadow:0 3px 10px rgba(0,0,0,.28);
+  display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0;font-size:10.5px;font-weight:800;line-height:1;letter-spacing:.02em;
+  opacity:0;visibility:hidden;transform:translateY(10px);transition:opacity .2s,transform .2s,visibility .2s;touch-action:manipulation;text-align:center}
+.totop.show{opacity:1;visibility:visible;transform:none}
+.totop svg{width:16px;height:16px;margin-bottom:2px;display:block}
+.totop:active{transform:scale(.94)}
+html:not(.js) .totop{opacity:1;visibility:visible;transform:none}
+@media (min-width:700px){.totop{right:max(18px,calc(50vw - 320px - 64px))}}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+@media print{.snav,.tools,.lang,.totop{display:none}.acc-body{display:block!important}}
+</style>
+</head>
+<body>
+<input type="radio" name="lg" id="lg-ko" class="lgr" checked><input type="radio" name="lg" id="lg-en" class="lgr">
+<div class="page">
+<header class="hero" id="top"><p class="kicker"><span class="ko">울산과학대학교 국제교류원</span><span class="en">Ulsan College · Office of International Affairs</span></p><h1 class="serif"><span class="ko">시간제취업허가<br>가이드</span><span class="en">Part-time Work<br>Permit Guide</span></h1><p class="sub"><span class="ko">외국인 유학생이 신청 전에 알아야 할 내용을 자가진단부터 신청 절차, 서류, 금지업종까지 단계별로 정리했습니다.</span><span class="en">Everything international students need before applying: eligibility check, allowed hours, documents, steps, and prohibited work.</span></p><div class="stamp"><span>D-2<br>D-4<br><span class="ko">유학생</span><span class="en">Students</span></span></div><div class="chips"><span class="chip">HiKorea</span><span class="chip"><span class="ko">울산출입국외국인사무소</span><span class="en">Ulsan Immigration Office</span></span></div></header><nav class="snav" aria-label="Sections"><div class="snav-links"><a href="#sum"><span class="ko">요약</span><span class="en">Summary</span></a><a href="#s1"><span class="ko">① 자가진단</span><span class="en">① Check</span></a><a href="#s2"><span class="ko">② 허용시간</span><span class="en">② Hours</span></a><a href="#s3"><span class="ko">③ 제출서류</span><span class="en">③ Documents</span></a><a href="#s4"><span class="ko">④ 신청절차</span><span class="en">④ Steps</span></a><a href="#s5"><span class="ko">⑤ 금지·처벌</span><span class="en">⑤ Rules</span></a></div><div class="lang" role="group" aria-label="Language"><button type="button" data-l="ko" aria-pressed="true">KO</button><button type="button" data-l="en" aria-pressed="false">EN</button><span class="lgl"><label for="lg-ko">KO</label><label for="lg-en">EN</label></span></div></nav><section class="sec" id="sum"><div class="sec-h"><h2 class="serif"><span class="no"></span><span class="ko">먼저 꼭 알아야 할 5가지</span><span class="en">5 things to know first</span></h2></div><div class="flow" aria-label="Order"><div class="st"><span class="ko">① 학교 확인</span><span class="en">① School check</span><small><span class="ko">국제교류원</span><span class="en">Intl. Affairs</span></small></div><span class="ar">→</span><div class="st"><span class="ko">② 출입국 허가</span><span class="en">② Permit</span><small><span class="ko">HiKorea · 방문</span><span class="en">HiKorea · in person</span></small></div><span class="ar">→</span><div class="st"><span class="ko">③ 근무 시작</span><span class="en">③ Start work</span><small><span class="ko">허가 후에만</span><span class="en">after approval only</span></small></div></div><ul class="rules"><li><b><span class="ko">허가 전에는 절대 근무 금지</span><span class="en">Never work before approval</span></b><span class="d"><span class="ko">수습·시범근무도 안 됩니다. 허가 승인 이후부터 근무하세요.</span><span class="en">Trial or probation work is not allowed either. Start only after approval.</span></span></li><li><b><span class="ko">학교 확인이 먼저</span><span class="en">School confirmation comes first</span></b><span class="d"><span class="ko">국제교류원에서 서류를 확인받은 뒤에 HiKorea나 출입국에 신청하세요.</span><span class="en">Have your documents checked at the Office of International Affairs before applying on HiKorea or at Immigration.</span></span></li><li><b><span class="ko">금지업종 4가지</span><span class="en">4 prohibited industries</span></b><span class="d"><span class="ko">제조업 · 건설업 · 숙박업 · 노래방은 허가되지 않습니다.</span><span class="en">Manufacturing, construction, lodging and karaoke are not permitted.</span></span></li><li><b><span class="ko">거주 도시 안에서만</span><span class="en">Only within your city of residence</span></b><span class="d"><span class="ko">거주 도시 안의 사업장만 가능합니다. 외국인등록증 주소와 사업장 주소를 비교하세요.</span><span class="en">Only workplaces in your city of residence are allowed. Compare the ARC address with the workplace address.</span></span></li><li><b><span class="ko">허가받은 조건 그대로</span><span class="en">Stay within your permit</span></b><span class="d"><span class="ko">허가된 시간·장소·기간을 지키세요. 근무지·고용주·시간·기간이 바뀌면 변경허가가 필요합니다.</span><span class="en">Keep to the approved hours, place and period. A change of workplace, employer, hours or period needs a new permit.</span></span></li></ul><div class="note bad"><span class="ic">🚨</span><div><span class="ko">허가 없이 근무하면 <b>최소 200만원 이상 벌금 + 1년간 신청 불가</b>. 2차 적발 시 강제퇴거(건설업은 1차부터 출국명령)이며 고용주에게도 범칙금이 부과됩니다.</span><span class="en">Working without a permit: <b>fine of at least KRW 2,000,000 + 1-year application ban</b>. A second offense means deportation (construction: departure order from the first offense). Employers are fined too.</span></div></div><div class="note"><span class="ic">📍</span><div><span class="ko">신청 전 반드시 <b>국제교류원 사무실을 방문</b>해 담당자에게 서류를 확인받으세요.</span><span class="en">Before applying, <b>visit the Office of International Affairs</b> in person and have your documents checked by staff.</span></div></div></section><section class="sec" id="s1"><div class="sec-h"><h2 class="serif"><span class="no">①</span><span class="ko">신청 가능 여부 자가진단</span><span class="en">Self-check before you apply</span></h2><p><span class="ko">6개 항목을 모두 확인하세요. 하나라도 충족하지 못하면 담당자에게 먼저 문의하세요.</span><span class="en">Check all 6 items. If any item is not met, consult your advisor first.</span></p></div><div class="prog" id="diag-prog"><div class="row"><div class="bar"><i id="diag-bar"></i></div><div class="cnt" id="diag-cnt">0 / 6</div></div><div class="msg" id="diag-msg"><span class="ko">항목을 확인하고 체크하세요.</span><span class="en">Review each item and tick it.</span></div></div><div class="tools"><button type="button" class="lnk" data-toggle-all="s1"><span class="ko">전체 펼치기/접기</span><span class="en">Expand / collapse all</span></button><button type="button" class="lnk" data-reset="s1"><span class="ko">초기화</span><span class="en">Reset</span></button></div><div class="acc" id="q1"><input type="checkbox" class="nj-c" id="nj1" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj1"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="qn">Q1</span><span class="ko">지금 신청할 수 있는 시기인가?</span><span class="en">Is it the right time to apply?</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="cond"><span class="l">D-2</span><span class="v ok"><span class="ko">✅ 즉시 가능</span><span class="en">✅ Eligible immediately</span></span></div><div class="cond"><span class="l">D-4</span><span class="v warn"><span class="ko">⚠️ 입국일(또는 체류자격 변경일)로부터 6개월 후</span><span class="en">⚠️ 6 months after entry / visa change</span></span></div><div class="kv bad"><span class="k"><span class="ko">미충족 시</span><span class="en">If not met</span></span><span class="ko">6개월이 지나기 전에는 신청하지 말고 기다리세요.</span><span class="en">If under 6 months, stop and wait.</span></div><div class="kv "><span class="k"><span class="ko">준비</span><span class="en">Prepare</span></span><span class="ko">외국인등록증으로 입국일 확인</span><span class="en">Check your entry date on the ARC.</span></div></div></div><div class="acc" id="q2"><input type="checkbox" class="nj-c" id="nj2" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj2"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="qn">Q2</span><span class="ko">성적 또는 출석 기준을 충족하는가?</span><span class="en">Do you meet the grade or attendance requirement?</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="cond"><span class="l">D-2</span><span class="v ok"><span class="ko">✅ 직전학기 GPA 2.0 이상</span><span class="en">✅ Previous-semester GPA ≥ 2.0</span></span></div><div class="cond"><span class="l">D-4</span><span class="v ok"><span class="ko">✅ 전체 출석률 90% 이상</span><span class="en">✅ Overall attendance ≥ 90%</span></span></div><div class="kv bad"><span class="k"><span class="ko">미충족 시</span><span class="en">If not met</span></span><span class="ko">성적·출석을 회복한 뒤 다시 신청하세요.</span><span class="en">Reapply after restoring grades/attendance.</span></div><div class="kv "><span class="k"><span class="ko">준비</span><span class="en">Prepare</span></span><span class="ko">성적증명서(D-2) · 출석확인자료(D-4)</span><span class="en">Transcript (D-2) · attendance record (D-4)</span></div></div></div><div class="acc" id="q3"><input type="checkbox" class="nj-c" id="nj3" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj3"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="qn">Q3</span><span class="ko">한국어(TOPIK) 기준을 충족하는가?</span><span class="en">Do you meet the TOPIK (Korean) requirement?</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="cond"><span class="l">D-2</span><span class="v ok"><span class="ko">✅ 전문학사 3급 / 전공심화 4급</span><span class="en">✅ Associate: Lv.3 / Bachelor's track: Lv.4</span></span></div><div class="cond"><span class="l">D-4</span><span class="v ok"><span class="ko">✅ 어학연수 2급</span><span class="en">✅ Language program: Lv.2</span></span></div><div class="kv "><span class="k"><span class="ko">영어트랙(D-2)</span><span class="en">English track (D-2)</span></span><span class="ko">TOPIK 없이도 기준을 충족한 것으로 봅니다. 학교에 영어트랙 여부를 확인하세요.</span><span class="en">Counted as meeting the requirement without TOPIK. Confirm your English-track status with the school.</span></div><div class="kv bad"><span class="k"><span class="ko">미충족 시</span><span class="en">If not met</span></span><span class="ko">근무 가능 시간이 주 10시간으로 줄어듭니다. TOPIK 취득 후 재신청하거나 제한을 받아들이세요.</span><span class="en">Hours drop to 10/week. Reapply after TOPIK, or accept the limit.</span></div><div class="kv "><span class="k"><span class="ko">준비</span><span class="en">Prepare</span></span><span class="ko">TOPIK 성적증명서 (영어트랙: 재학 확인서·IELTS 성적표)</span><span class="en">TOPIK certificate (English track: enrollment proof, IELTS score)</span></div></div></div><div class="acc" id="q4"><input type="checkbox" class="nj-c" id="nj4" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj4"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="qn">Q4</span><span class="ko">근무지가 내 거주 도시 안이고, 금지업종이 아닌가?</span><span class="en">Is the workplace in your city and not a prohibited industry?</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="cond"><span class="l">D-2</span><span class="v ok"><span class="ko">✅ 거주 도시 안 · 제조·건설·숙박·노래방 제외</span><span class="en">✅ In your city · not manufacturing, construction, lodging, karaoke</span></span></div><div class="cond"><span class="l">D-4</span><span class="v ok"><span class="ko">✅ 거주 도시 안 · 제조·건설·숙박·노래방 제외</span><span class="en">✅ In your city · not manufacturing, construction, lodging, karaoke</span></span></div><div class="kv bad"><span class="k"><span class="ko">미충족 시</span><span class="en">If not met</span></span><span class="ko">근무지를 바꾸거나 신청을 보류하세요. 업종이 애매하면 고용주에게 재확인을 요청하세요.</span><span class="en">Change the workplace or hold the application. If unsure about the industry, ask the employer to reconfirm.</span></div><div class="kv "><span class="k"><span class="ko">준비</span><span class="en">Prepare</span></span><span class="ko">사업자등록증의 업태·종목 확인 · 외국인등록증 주소와 사업장 주소 비교</span><span class="en">Check business type and item on the license · compare ARC address with the workplace address</span></div></div></div><div class="acc" id="q5"><input type="checkbox" class="nj-c" id="nj5" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj5"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="qn">Q5</span><span class="ko">계약서와 학교 확인서가 준비되어 있는가?</span><span class="en">Are the contract and the school confirmation ready?</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="cond"><span class="l">D-2</span><span class="v ok"><span class="ko">✅ 필수</span><span class="en">✅ Required</span></span></div><div class="cond"><span class="l">D-4</span><span class="v ok"><span class="ko">✅ 필수</span><span class="en">✅ Required</span></span></div><div class="kv bad"><span class="k"><span class="ko">미충족 시</span><span class="en">If not met</span></span><span class="ko">계약서 없이 일하면 불법취업입니다. 출입국 신청 전에 학교 확인을 먼저 받아야 합니다 → 국제교류원 방문.</span><span class="en">Working without a contract counts as illegal employment. Get school confirmation before applying to Immigration → visit the Office of International Affairs.</span></div><div class="kv "><span class="k"><span class="ko">준비</span><span class="en">Prepare</span></span><span class="ko">표준근로계약서(서명 완료본) · 시간제취업확인서(학교 확인)</span><span class="en">Standard employment contract (signed) · part-time work confirmation (school-verified)</span></div></div></div><div class="acc" id="q6"><input type="checkbox" class="nj-c" id="nj6" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj6"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="qn">Q6</span><span class="ko">허가받기 전에는 근무를 시작하지 않았는가?</span><span class="en">Have you NOT started work before approval?</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="cond"><span class="l">D-2</span><span class="v bad"><span class="ko">🚫 허가 전 근무 절대 불가</span><span class="en">🚫 Never work before approval</span></span></div><div class="cond"><span class="l">D-4</span><span class="v bad"><span class="ko">🚫 허가 전 근무 절대 불가</span><span class="en">🚫 Never work before approval</span></span></div><div class="kv bad"><span class="k"><span class="ko">이미 시작했다면</span><span class="en">If you already started</span></span><span class="ko">수습·시범근무도 승인 이후에만 가능합니다. 즉시 근무를 중단하고 담당자와 상담하세요.</span><span class="en">Even trial/probation work is allowed only after approval. Stop working immediately and consult your advisor.</span></div></div></div></section><section class="sec" id="s2"><div class="sec-h"><h2 class="serif"><span class="no">②</span><span class="ko">허용 근무시간</span><span class="en">Allowed working hours</span></h2><p><span class="ko">과정·비자·TOPIK·대학 유형(일반 / 인증대학 IEQAS)에 따라 주당 허용 시간이 달라집니다.</span><span class="en">Allowed hours per week vary by course, visa, TOPIK status and university type (general / IEQAS-certified).</span></p></div><div class="hcard"><div class="hcard-h"><span class="name"><span class="ko">어학연수</span><span class="en">Language program</span><span class="tg req">D-4</span></span></div><div class="hreq"><div><span class="ko">TOPIK 2급 필요</span><span class="en">TOPIK Level 2 required</span></div><div><span class="ko">시작: 입국 후 6개월</span><span class="en">Start: 6 months after entry</span></div><div><span class="ko">학교 확인 기준: 출석률 90% 이상</span><span class="en">School check: attendance ≥ 90%</span></div></div><div class="hsub"><span class="ko">TOPIK 충족 시 · 주당 허용 시간</span><span class="en">If TOPIK is met · hours per week</span></div><table class="hg"><thead><tr><th></th><th><span class="ko">일반대학</span><span class="en">General</span></th><th><span class="ko">인증대학 (IEQAS)</span><span class="en">IEQAS-certified</span></th></tr></thead><tbody><tr><th><span class="ko">주중</span><span class="en">Weekdays</span></th><td>20<small>h</small></td><td>25<small>h</small></td></tr><tr><th><span class="ko">주말·방학</span><span class="en">Weekends / vacation</span></th><td>20<small>h</small></td><td>25<small>h</small></td></tr></tbody></table><div class="hlow"><span class="ko">TOPIK 미충족 시 · 대학 유형 관계없이 주 10시간</span><span class="en">If TOPIK not met · 10 hours/week for any university type</span></div></div><div class="hcard"><div class="hcard-h"><span class="name"><span class="ko">정규과정</span><span class="en">Degree programs</span><span class="tg req">D-2</span></span></div><div class="hreq"><div><span class="ko">TOPIK: 전문학사(D-2-1) 3급 · 전공심화(D-2-2) 4급</span><span class="en">TOPIK: Associate (D-2-1) Lv.3 · Bachelor's track (D-2-2) Lv.4</span></div><div><span class="ko">영어트랙: TOPIK 요건 면제 (충족과 동일)</span><span class="en">English track: TOPIK exempt (same as met)</span></div><div><span class="ko">시작: 즉시 가능</span><span class="en">Start: immediately</span></div><div><span class="ko">학교 확인 기준: 직전학기 GPA 2.0 이상</span><span class="en">School check: previous-semester GPA ≥ 2.0</span></div></div><div class="hsub"><span class="ko">TOPIK 충족 시 · 주당 허용 시간</span><span class="en">If TOPIK is met · hours per week</span></div><table class="hg"><thead><tr><th></th><th><span class="ko">일반대학</span><span class="en">General</span></th><th><span class="ko">인증대학 (IEQAS)</span><span class="en">IEQAS-certified</span></th></tr></thead><tbody><tr><th><span class="ko">주중</span><span class="en">Weekdays</span></th><td>25<small>h</small></td><td>30<small>h</small></td></tr><tr><th><span class="ko">주말·방학</span><span class="en">Weekends / vacation</span></th><td class="unl"><span class="ko">무제한</span><span class="en">No limit</span></td><td class="unl"><span class="ko">무제한</span><span class="en">No limit</span></td></tr></tbody></table><div class="hlow"><span class="ko">TOPIK 미충족 시 · 대학 유형 관계없이 주 10시간</span><span class="en">If TOPIK not met · 10 hours/week for any university type</span></div></div><div class="note warn"><span class="ic">⚠️</span><div><span class="ko">실제 허가 여부는 체류 상태·성적·출석·업종·출입국 심사 결과에 따라 달라질 수 있습니다.</span><span class="en">Actual approval depends on visa status, grades, attendance, industry and Immigration review.</span></div></div></section><section class="sec" id="s3"><div class="sec-h"><h2 class="serif"><span class="no">③</span><span class="ko">제출서류 체크리스트</span><span class="en">Document checklist</span></h2><p><span class="ko">온라인·방문 공통입니다. 내 비자에 맞는 서류를 골라 준비하고 체크하세요.</span><span class="en">Common to online and in-person filing. Choose your visa type and tick each document off.</span></p></div><div class="note"><span class="ic">💾</span><div><span class="ko"><b>온라인</b>: 스캔·사진 파일로 제출 (파일 용량 2MB 이하) · <b>방문</b>: 원본 지참이 안전합니다.</span><span class="en"><b>Online</b>: scans/photos (file size ≤ 2MB) · <b>In person</b>: bringing originals is safest.</span></div></div><div class="note warn"><span class="ic">📌</span><div><span class="ko">사업자등록증 사본과 고용주 신분증 사본은 출입국 사업장 등록을 위한 필수 서류입니다.</span><span class="en">The business license copy and the employer's ID copy are mandatory for workplace registration at Immigration.</span></div></div><div class="filt" role="group" aria-label="filter"><button type="button" class="fb" data-f="all" aria-pressed="true"><span class="ko">전체</span><span class="en">All</span></button><button type="button" class="fb" data-f="d2" aria-pressed="false">D-2</button><button type="button" class="fb" data-f="d4" aria-pressed="false">D-4</button></div><div class="prog" id="doc-prog"><div class="row"><div class="bar"><i id="doc-bar"></i></div><div class="cnt" id="doc-cnt">0 / 11</div></div><div class="msg" id="doc-msg"><span class="ko">준비한 서류를 체크하세요.</span><span class="en">Tick each document as you prepare it.</span></div></div><div class="tools"><button type="button" class="lnk" data-toggle-all="s3"><span class="ko">전체 펼치기/접기</span><span class="en">Expand / collapse all</span></button><button type="button" class="lnk" data-reset="s3"><span class="ko">초기화</span><span class="en">Reset</span></button></div><div class="acc" data-d2="req" data-d4="req"><input type="checkbox" class="nj-c" id="nj7" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj7"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">여권</span><span class="en">Passport</span></span><span class="tags"><span class="tg who"><span class="ko">학생</span><span class="en">Student</span></span><span class="tg req"><span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">성명·번호·유효기간 전체</span><span class="en">Name, number, full validity</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">사진 흐림, 유효기간 확인 불가</span><span class="en">Blurry photo; validity unreadable</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">여권 정보면 전체가 보이게 준비</span><span class="en">Show the entire info page.</span></div></div></div><div class="acc" data-d2="req" data-d4="req"><input type="checkbox" class="nj-c" id="nj8" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj8"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">외국인등록증</span><span class="en">Alien Registration Card (ARC)</span></span><span class="tags"><span class="tg who"><span class="ko">학생</span><span class="en">Student</span></span><span class="tg req"><span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">체류자격·기간·주소</span><span class="en">Status, period, address</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">뒷면 미첨부 (체류기간 불명)</span><span class="en">Back missing (period unclear)</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">앞면+뒷면 모두 제출</span><span class="en">Submit both front and back.</span></div></div></div><div class="acc" data-d2="req" data-d4="req"><input type="checkbox" class="nj-c" id="nj9" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj9"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">표준근로계약서</span><span class="en">Standard employment contract</span></span><span class="tags"><span class="tg who"><span class="ko">학생+고용주</span><span class="en">Student + Employer</span></span><span class="tg req"><span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">근무지·시간·임금·서명</span><span class="en">Workplace, hours, wage, signature</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">서명 누락·시간 미기재</span><span class="en">Missing signature/hours</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">근무요일·시간·시급을 명확히 적으세요. 방문 신청은 원본을 보관하고 사본을 제출하세요.</span><span class="en">State work days, hours and hourly wage clearly. For in-person filing, keep the original and submit a copy.</span></div></div></div><div class="acc" data-d2="req" data-d4="req"><input type="checkbox" class="nj-c" id="nj10" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj10"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">시간제취업확인서</span><span class="en">Part-time work confirmation form</span></span><span class="tags"><span class="tg who"><span class="ko">학생+학교</span><span class="en">Student + School</span></span><span class="tg req"><span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">학교 확인·근무시간 합계</span><span class="en">School verification; total hours</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">학교 확인 누락·정보 불일치</span><span class="en">No school verification; mismatched info</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">학교 확인 없는 확인서는 제출할 수 없습니다.</span><span class="en">Cannot be submitted without school verification.</span></div></div></div><div class="acc" data-d2="req" data-d4="req"><input type="checkbox" class="nj-c" id="nj11" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj11"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">사업자등록증 사본</span><span class="en">Copy of business license</span></span><span class="tags"><span class="tg who"><span class="ko">고용주</span><span class="en">Employer</span></span><span class="tg req"><span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">사업장명·주소·업태·종목</span><span class="en">Business name, address, type, item</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">금지업종·주소 불일치·글자 흐림</span><span class="en">Prohibited industry; address mismatch; blurry</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">업태와 종목이 금지업종인지 반드시 확인하세요.</span><span class="en">Check that the business type/item isn't prohibited.</span></div></div></div><div class="acc" data-d2="req" data-d4="req"><input type="checkbox" class="nj-c" id="nj12" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj12"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">고용주 신분증 사본</span><span class="en">Copy of employer's ID</span></span><span class="tags"><span class="tg who"><span class="ko">고용주</span><span class="en">Employer</span></span><span class="tg req"><span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">고용주 인적사항·선명도</span><span class="en">Employer details; clarity</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">식별 불가·제출 누락</span><span class="en">Unidentifiable; missing</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">사업주가 2명이면 2명 모두 신분증이 필요합니다.</span><span class="en">If there are two owners, both IDs are required.</span></div></div></div><div class="acc" data-d2="req" data-d4="na"><input type="checkbox" class="nj-c" id="nj13" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj13"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">성적증명서</span><span class="en">Official transcript</span></span><span class="tags"><span class="tg who"><span class="ko">학생/학교</span><span class="en">Student / School</span></span><span class="tg req">D-2 <span class="ko">필수</span><span class="en">Required</span></span><span class="tg ">D-4 <span class="ko">해당없음</span><span class="en">N/A</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">직전학기 GPA 2.0 이상</span><span class="en">Previous-semester GPA ≥ 2.0</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">성적 기준 미달·직전학기 아님</span><span class="en">Below GPA; not the latest semester</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">D-2 학생은 직전학기 성적을 확인하세요.</span><span class="en">D-2 students must verify previous-semester grades.</span></div></div></div><div class="acc" data-d2="na" data-d4="req"><input type="checkbox" class="nj-c" id="nj14" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj14"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">출석확인자료</span><span class="en">Attendance record</span></span><span class="tags"><span class="tg who"><span class="ko">학교</span><span class="en">School</span></span><span class="tg ">D-2 <span class="ko">해당없음</span><span class="en">N/A</span></span><span class="tg req">D-4 <span class="ko">필수</span><span class="en">Required</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">전체 출석률 90% 이상</span><span class="en">Overall attendance ≥ 90%</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">출석률 90% 미달</span><span class="en">Attendance below 90%</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">D-4 어학연수생은 전체 출석률을 확인하세요.</span><span class="en">D-4 language students must verify overall attendance.</span></div></div></div><div class="acc" data-d2="cond" data-d4="cond"><input type="checkbox" class="nj-c" id="nj15" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj15"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">TOPIK 성적증명서</span><span class="en">TOPIK score certificate</span></span><span class="tags"><span class="tg who"><span class="ko">학생</span><span class="en">Student</span></span><span class="tg cond"><span class="ko">해당자</span><span class="en">If applicable</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">과정별 급수 충족 여부</span><span class="en">Required level per course</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">급수 미달·유효성 불명</span><span class="en">Below level; validity unclear</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">TOPIK 미충족 시 주 10시간으로 제한됩니다.</span><span class="en">Without TOPIK, limited to 10 hrs/week.</span></div></div></div><div class="acc" data-d2="cond" data-d4="na"><input type="checkbox" class="nj-c" id="nj16" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj16"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">IELTS 성적표 (영어트랙)</span><span class="en">IELTS score certificate (English track)</span></span><span class="tags"><span class="tg who"><span class="ko">학교</span><span class="en">School</span></span><span class="tg cond">D-2 <span class="ko">해당자</span><span class="en">If applicable</span></span><span class="tg ">D-4 <span class="ko">해당없음</span><span class="en">N/A</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">영어트랙 재학 여부 확인</span><span class="en">Confirm English-track enrollment</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">영어트랙 여부 불명확</span><span class="en">English-track status unclear</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">IELTS 성적표로 TOPIK 요건을 대체할 수 있습니다. 영어트랙은 D-2 과정에만 있어 D-4는 해당되지 않습니다.</span><span class="en">IELTS can replace the TOPIK requirement. The English track exists only for D-2, so it doesn't apply to D-4.</span></div></div></div><div class="acc" data-d2="visit" data-d4="visit"><input type="checkbox" class="nj-c" id="nj17" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj17"><i></i></label><button type="button" class="chk" aria-pressed="false" aria-label="check"><i></i></button><button type="button" class="acc-head" aria-expanded="false"><span class="acc-t"><span class="t"><span class="ko">방문예약 확인자료</span><span class="en">Visit reservation</span></span><span class="tags"><span class="tg who"><span class="ko">학생</span><span class="en">Student</span></span><span class="tg cond"><span class="ko">방문 시</span><span class="en">At visit</span></span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="kv "><span class="k"><span class="ko">확인할 것</span><span class="en">What is checked</span></span><span class="ko">예약일시·장소 (온라인 신청은 해당없음)</span><span class="en">Reservation date/time and place (N/A for online)</span></div><div class="kv bad"><span class="k"><span class="ko">반려 사유</span><span class="en">Common rejection</span></span><span class="ko">예약 누락</span><span class="en">No reservation</span></div><div class="kv ok"><span class="k"><span class="ko">TIP</span><span class="en">TIP</span></span><span class="ko">방문 신청 전에 예약 일자를 반드시 확인하세요.</span><span class="en">Confirm the reservation date before in-person filing.</span></div></div></div><div class="note" style="align-items:flex-start"><span class="ic">※</span><div><p style="font-weight:700;color:var(--head);margin-bottom:2px"><span class="ko">퇴직증명서가 필요한 경우</span><span class="en">When a resignation certificate is needed</span></p><div class="kv "><span class="k"><span class="ko">해당 대상</span><span class="en">Who this applies to</span></span><span class="ko">이미 다른 사업장에서 시간제취업 허가를 받아 일하다가, 그곳을 그만두고 새로운 곳에서 다시 신청할 때만 필요합니다. 처음 신청하는 학생은 준비하지 않아도 됩니다. 양식은 국제교류원 사무실에서 받으세요.</span><span class="en">Only if you already hold a permit at another workplace and are leaving it to apply at a new one. First-time applicants don't need this. Get the form at the Office of International Affairs.</span></div></div></div></section><section class="sec" id="s4"><div class="sec-h"><h2 class="serif"><span class="no">④</span><span class="ko">신청 절차</span><span class="en">Application steps</span></h2><p><span class="ko">학교 확인 → 출입국 신청(온라인 또는 방문) → 승인 후 근무. 순서대로 진행하세요.</span><span class="en">School check → Immigration filing (online or in person) → work after approval. Follow the order.</span></p></div><div class="tools"><button type="button" class="lnk" data-toggle-all="s4"><span class="ko">전체 펼치기/접기</span><span class="en">Expand / collapse all</span></button></div><div class="acc"><input type="checkbox" class="nj-c" id="nj18" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj18"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">1</span><span class="acc-t"><span class="t"><span class="ko">신청 가능 여부 확인</span><span class="en">Check your eligibility</span></span><span class="s"><span class="ko">D-2/D-4 · 6개월 · 성적 · 출석 · TOPIK</span><span class="en">D-2/D-4 · 6 months · grades · attendance · TOPIK</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="blk do"><div class="k"><span class="ko">할 일</span><span class="en">What to do</span></div><p><span class="ko">D-2/D-4 여부, D-4의 6개월 경과, 성적·출석·TOPIK 기준을 확인합니다.</span><span class="en">Confirm your visa (D-2/D-4), the 6-month rule for D-4, and the grade/attendance/TOPIK requirements.</span></p></div><div class="blk err"><div class="k"><span class="ko">자주 하는 실수</span><span class="en">Common mistakes</span></div><p><span class="ko">D-4 6개월 전 신청, TOPIK 기준 착각, 기준 미충족으로 헛걸음</span><span class="en">Applying before D-4's 6 months; misreading the TOPIK level; a wasted trip because requirements weren't met</span></p></div><div class="blk tip"><div class="k"><span class="ko">TIP</span><span class="en">TIP</span></div><p><span class="ko">신청 전 국제교류원에서 기준을 확인받으세요.</span><span class="en">Have the Office of International Affairs confirm the requirements before you apply.</span></p></div></div></div><div class="acc"><input type="checkbox" class="nj-c" id="nj19" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj19"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">2</span><span class="acc-t"><span class="t"><span class="ko">근무조건 확정 · 계약서 작성</span><span class="en">Agree on terms and sign the contract</span></span><span class="s"><span class="ko">표준근로계약서 + 시간제취업확인서에 고용주 서명</span><span class="en">Employer signs the contract and the confirmation form</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="blk do"><div class="k"><span class="ko">할 일</span><span class="en">What to do</span></div><p><span class="ko">고용주와 근무요일·시간·시급·업무를 확정하고 ① 표준근로계약서 ② 시간제취업확인서, 두 서류에 고용주 서명을 받습니다.</span><span class="en">Agree on work days, hours, wage and duties with the employer, then get the employer's signature on (1) the standard employment contract and (2) the part-time work confirmation form.</span></p></div><div class="blk err"><div class="k"><span class="ko">자주 하는 실수</span><span class="en">Common mistakes</span></div><p><span class="ko">허용시간을 초과한 계약, 서명 누락</span><span class="en">Contract hours over your limit; missing signature</span></p></div><div class="blk tip"><div class="k"><span class="ko">TIP</span><span class="en">TIP</span></div><p><span class="ko">허가 가능 시간 안에서만 계약하고, 근무요일·시간을 계약서에 명확히 적으세요.</span><span class="en">Contract only within your allowed hours, and state work days and hours clearly.</span></p></div></div></div><div class="acc"><input type="checkbox" class="nj-c" id="nj20" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj20"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">3</span><span class="acc-t"><span class="t"><span class="ko">사업장 서류 받기 · 기존 허가 확인</span><span class="en">Get workplace documents · check for an existing permit</span></span><span class="s"><span class="ko">사업자등록증 · 고용주 신분증 · 퇴직증명서(해당자)</span><span class="en">Business license · employer's ID · resignation certificate (if any)</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="blk do"><div class="k"><span class="ko">할 일</span><span class="en">What to do</span></div><p><span class="ko">고용주에게 사업자등록증과 고용주 신분증 사본을 요청합니다.</span><span class="en">Ask your employer for the business license and a copy of the employer's ID.</span></p><p><span class="ko">신청 기간에 이미 다른 사업장의 시간제취업 허가가 등록되어 있으면, 그 사업장의 <b>퇴직증명서</b>를 받아 함께 제출합니다 (해당자만).</span><span class="en">If a permit at another workplace is already registered for the period, get that workplace's <b>resignation certificate</b> and submit it too (if applicable).</span></p></div><div class="blk err"><div class="k"><span class="ko">자주 하는 실수</span><span class="en">Common mistakes</span></div><p><span class="ko">실제 근무지와 사업자등록증 주소 불일치, 기존 허가를 해지하지 않은 채 신청</span><span class="en">Workplace differs from the license address; applying while a prior permit is still active</span></p></div><div class="blk tip"><div class="k"><span class="ko">TIP</span><span class="en">TIP</span></div><p><span class="ko">사업자등록증 주소와 실제 근무지를 비교하고, 이전 사업장에서 퇴직증명서를 먼저 받으세요.</span><span class="en">Compare the license address with the actual workplace, and get the resignation certificate from the previous workplace first.</span></p></div></div></div><div class="acc"><input type="checkbox" class="nj-c" id="nj21" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj21"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">4</span><span class="acc-t"><span class="t"><span class="ko">서류 준비 · 학교 확인</span><span class="en">Prepare documents · get school confirmation</span></span><span class="s"><span class="ko">서류 전체를 국제교류원에서 확인받기</span><span class="en">Have every document verified by the Office of International Affairs</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="blk do"><div class="k"><span class="ko">할 일</span><span class="en">What to do</span></div><p><span class="ko">아래 서류를 모두 준비해 국제교류원 담당자에게 제출하고 확인받습니다.</span><span class="en">Prepare the documents below and submit them to the Office of International Affairs for verification.</span></p><ul class="ml"><li><span class="ko">여권</span><span class="en">Passport</span></li><li><span class="ko">외국인등록증</span><span class="en">ARC</span></li><li><span class="ko">표준근로계약서</span><span class="en">Employment contract</span></li><li><span class="ko">시간제취업확인서</span><span class="en">Part-time work confirmation form</span></li><li><span class="ko">사업자등록증 사본</span><span class="en">Copy of business license</span></li><li><span class="ko">고용주 신분증 사본</span><span class="en">Copy of employer's ID</span></li><li><span class="ko">성적증명서(D-2) 또는 출석확인자료(D-4)</span><span class="en">Transcript (D-2) or attendance record (D-4)</span></li><li><span class="ko">TOPIK 또는 IELTS 성적표 (해당자)</span><span class="en">TOPIK or IELTS score (if applicable)</span></li></ul></div><div class="blk err"><div class="k"><span class="ko">자주 하는 실수</span><span class="en">Common mistakes</span></div><p><span class="ko">금지업종 또는 거주 도시 밖 근무로 확인 거절</span><span class="en">Rejected for a prohibited industry or work outside your city</span></p></div><div class="blk tip"><div class="k"><span class="ko">TIP</span><span class="en">TIP</span></div><p><span class="ko"><b>학교 확인 전에는</b> HiKorea 신청을 마치거나 출입국을 방문하지 마세요.</span><span class="en"><b>Before school verification</b>, don't finish the HiKorea application or visit Immigration.</span></p></div></div></div><div class="acc"><input type="checkbox" class="nj-c" id="nj22" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj22"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">5</span><span class="acc-t"><span class="t"><span class="ko">출입국에 신청 (온라인 또는 방문)</span><span class="en">File with Immigration (online or in person)</span></span><span class="s"><span class="ko">HiKorea 온라인 또는 울산출입국 방문 중 택1</span><span class="en">Choose one: HiKorea online or in person at Ulsan Immigration</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><p><span class="ko">편한 방법 하나를 고르세요. 어느 쪽이든 <b>학교 확인이 먼저</b>입니다.</span><span class="en">Pick one method. Either way, <b>school confirmation comes first</b>.</span></p><div class="tabs" role="tablist"><button type="button" class="tab" role="tab" data-k="on" aria-selected="true">🖥 <span class="ko">온라인 (HiKorea)</span><span class="en">Online (HiKorea)</span></button><button type="button" class="tab" role="tab" data-k="off" aria-selected="false">🏢 <span class="ko">방문 (울산출입국)</span><span class="en">In person (Ulsan)</span></button></div><div class="pane active" data-k="on"><ol class="sub"><li><b><span class="ko">HiKorea 계정 준비</span><span class="en">Set up your HiKorea account</span></b><span class="ko">www.hikorea.go.kr에서 본인 계정으로 로그인하세요. 계정이 없으면 회원가입(이름·외국인등록번호·이메일)이 필요합니다.</span><span class="en">Log in at www.hikorea.go.kr with your own account. No account? Sign up (name, ARC number, email).</span><div class="mini err">⚠ <span class="ko">타인 계정 사용, 비밀번호 분실</span><span class="en">Using someone else's account; lost password</span></div><div class="mini tip">★ <span class="ko">반드시 본인 명의로 가입하세요</span><span class="en">Always register under your own name.</span></div></li><li><b><span class="ko">서류 파일 준비</span><span class="en">Prepare your files</span></b><span class="ko">모든 서류를 PDF 또는 선명한 이미지로 준비하고 파일명을 서류명으로 정리하세요. 파일 용량은 2MB(2,048KB) 이하이며, 파일명에 한글·영어 외 문자가 있으면 업로드 오류가 날 수 있습니다.</span><span class="en">Prepare every document as a PDF or clear image and name each file after its document. File size: ≤ 2MB (2,048KB). Characters other than Korean/English in file names may cause upload errors.</span><div class="mini err">⚠ <span class="ko">흐리거나 잘린 사진, 파일 누락, 용량 초과, 파일명 오류</span><span class="en">Blurry/cropped photos; missing files; oversize; bad file names</span></div><div class="mini tip">★ <span class="ko">문서 전체가 보이게 촬영하고 파일명은 간단히</span><span class="en">Capture the whole document; keep file names simple.</span></div></li><li><b><span class="ko">메뉴 접속 · 정보 입력</span><span class="en">Open the menu · enter details</span></b><span class="ko">로그인 후 전자민원 → 시간제취업허가(유학생) 메뉴를 선택하고, 외국인등록번호·체류지·근무지·고용주·근무기간·주당시간을 입력합니다.</span><span class="en">After login, go to e-Application → Part-time Work Permit (students) and enter ARC number, residence, workplace, employer, work period and weekly hours.</span><div class="mini err">⚠ <span class="ko">메뉴 선택 오류, 근무기간·시간 오입력</span><span class="en">Wrong menu; wrong work period/hours</span></div><div class="mini tip">★ <span class="ko">계약서와 완전히 동일하게 입력하세요</span><span class="en">Enter exactly as in the contract.</span></div></li><li><b><span class="ko">업로드 · 제출</span><span class="en">Upload · submit</span></b><span class="ko">항목별로 파일을 올리고(파일명과 항목 일치 확인) 입력 내용과 첨부파일을 다시 확인한 뒤 제출합니다. <b>접수번호를 꼭 저장</b>하세요.</span><span class="en">Upload each file to its field (match file name to field), recheck entries and attachments, then submit. <b>Save the receipt number.</b></span><div class="mini err">⚠ <span class="ko">다른 서류 업로드, 파일 누락, 오타</span><span class="en">Wrong document; missing file; typos</span></div><div class="mini tip">★ <span class="ko">제출 전 계약서와 신청 화면을 한 번 더 비교하세요</span><span class="en">Compare the contract and the form once more before submitting.</span></div></li></ol></div><div class="pane" data-k="off"><ol class="sub"><li><b><span class="ko">근로 시작일 · 방문 예약</span><span class="en">Start date · reservation</span></b><span class="ko">시간제취업확인서와 표준근로계약서의 <b>근로 시작일은 울산출입국 방문일보다 반드시 이후</b>여야 합니다. (예: 6/10 방문 → 근로 시작일은 6/11 이후) 방문 예약을 완료하고 예약 확인자료를 챙기세요.</span><span class="en">The <b>work start date</b> on the confirmation form and contract <b>must be later than your Ulsan Immigration visit date</b> (e.g., visit 6/10 → start date 6/11 or later). Complete your visit reservation and keep the confirmation.</span><div class="mini err">⚠ <span class="ko">시작일이 방문일보다 이르면 접수 불가 · 예약 없이 방문해도 접수 불가</span><span class="en">Not accepted if the start date precedes the visit, or without a reservation</span></div><div class="mini tip">★ <span class="ko">방문 전 예약 여부를 반드시 확인하세요</span><span class="en">Always confirm your reservation before visiting.</span></div></li><li><b><span class="ko">서류 정리</span><span class="en">Order your documents</span></b><span class="ko">체크리스트 순서대로 정리하고 원본과 사본을 구분하세요. 방문 신청은 원본 지참이 안전하며, 표준근로계약서는 원본을 보관하고 사본을 제출하는 것을 권장합니다.</span><span class="en">Arrange documents in checklist order and separate originals from copies. Bringing originals is safest; keep the contract original and submit a copy.</span><div class="mini err">⚠ <span class="ko">여권 미지참, 외국인등록증 분실, 창구에서 서류를 못 찾음</span><span class="en">Forgot passport; lost ARC; can't find documents at the counter</span></div></li><li><b><span class="ko">울산출입국 방문 접수</span><span class="en">File at Ulsan Immigration</span></b><span class="ko">예약시간에 맞춰 울산출입국외국인사무소를 방문해 시간제취업허가를 신청합니다. 신분증과 예약시간을 확인하세요.</span><span class="en">Visit Ulsan Immigration Office at your reserved time and file the application. Check your ID and reservation time.</span><div class="mini err">⚠ <span class="ko">지각, 원본 미지참</span><span class="en">Late; originals not brought</span></div><div class="mini tip">★ <span class="ko">예약시간보다 여유 있게 도착하세요</span><span class="en">Arrive a little before your reserved time.</span></div></li></ol></div></div></div><div class="acc"><input type="checkbox" class="nj-c" id="nj23" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj23"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">6</span><span class="acc-t"><span class="t"><span class="ko">보완 요청 확인 · 승인 후 근무</span><span class="en">Check corrections · work after approval</span></span><span class="s"><span class="ko">보완 요청 확인 → 승인 이후에만 근무</span><span class="en">Check for corrections → work only after approval</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="blk do"><div class="k"><span class="ko">할 일</span><span class="en">What to do</span></div><p><span class="ko">접수 후 보완 요청이 있는지 확인하세요. 온라인은 HiKorea 알림·문자·이메일, 방문 신청은 요청받은 서류를 기한 내에 다시 제출합니다.</span><span class="en">After filing, check for correction requests: HiKorea notices, SMS and email (online), or resubmit the requested documents on time (in person).</span></p><p><span class="ko">승인되면 <b>허가된 사업장·기간·시간 안에서만</b> 근무하고, 허가 내역(조건)을 사진이나 파일로 저장하세요.</span><span class="en">Once approved, work <b>only within the approved workplace, period and hours</b>, and save the permit conditions as a photo or file.</span></p></div><div class="blk err"><div class="k"><span class="ko">자주 하는 실수</span><span class="en">Common mistakes</span></div><p><span class="ko">보완기한 경과, 승인 전 근무 시작, 허가 조건을 확인하지 않고 시간 초과 근무</span><span class="en">Missed the correction deadline; starting work before approval; over-working without checking conditions</span></p></div><div class="blk tip"><div class="k"><span class="ko">TIP</span><span class="en">TIP</span></div><p><span class="ko">보완 요청을 받으면 즉시 학교와 고용주에게 알리세요. <b>승인 전 근무는 불법취업</b>입니다.</span><span class="en">Tell your school and employer immediately if corrections are requested. <b>Working before approval is illegal employment.</b></span></p></div></div></div><div class="acc"><input type="checkbox" class="nj-c" id="nj24" aria-label="check"><div class="acc-row"><label class="nj-l" for="nj24"><i></i></label><button type="button" class="acc-head nochk" aria-expanded="false"><span class="sn">7</span><span class="acc-t"><span class="t"><span class="ko">변경이 생기면 다시 허가</span><span class="en">Changes need a new permit</span></span><span class="s"><span class="ko">근무지·고용주·시간·기간이 바뀌면 변경허가</span><span class="en">Workplace, employer, hours or period changed → apply again</span></span></span><span class="chev" aria-hidden="true"></span></button></div><div class="acc-body"><div class="blk do"><div class="k"><span class="ko">할 일</span><span class="en">What to do</span></div><p><span class="ko">근무지·고용주·시간·기간이 바뀌면 반드시 다시 허가를 신청하세요. 같은 사장님의 <b>다른 지점도 변경허가</b>가 필요합니다. 변경 계약서 등을 준비합니다.</span><span class="en">If the workplace, employer, hours or period change, you must reapply. Even <b>another branch of the same owner needs a change permit</b>. Prepare the revised contract, etc.</span></p></div><div class="blk err"><div class="k"><span class="ko">자주 하는 실수</span><span class="en">Common mistakes</span></div><p><span class="ko">변경 후 무허가 근무</span><span class="en">Working without a permit after a change</span></p></div><div class="blk tip"><div class="k"><span class="ko">TIP</span><span class="en">TIP</span></div><p><span class="ko">조건이 바뀌면 기존 허가를 그대로 사용할 수 없습니다.</span><span class="en">A changed condition voids your existing permit.</span></p></div></div></div></section><section class="sec" id="s5"><div class="sec-h"><h2 class="serif"><span class="no">⑤</span><span class="ko">금지업종 · 위반 처벌</span><span class="en">Prohibited work · penalties</span></h2><p><span class="ko">아래 업종·상황에서는 시간제취업이 허가되지 않습니다. 업종은 반드시 사업자등록증으로 확인하세요.</span><span class="en">Part-time work is not permitted in the industries/situations below. Always verify the industry on the business license.</span></p></div><h3 class="grp"><span class="ko">금지업종</span><span class="en">Prohibited industries</span></h3><div class="ban"><div class="it"><b><span class="ko">제조업</span><span class="en">Manufacturing</span></b><span class="e"><span class="ko">예: 공장·생산라인·조립·포장</span><span class="en">e.g. Factory, production line, assembly, packing</span></span></div><div class="it"><b><span class="ko">건설업</span><span class="en">Construction</span></b><span class="e"><span class="ko">예: 공사장·현장보조·철거·인테리어</span><span class="en">e.g. Construction site, site assistant, demolition, interior</span></span><span class="x"><span class="ko">적발 시 횟수 무관 출국명령</span><span class="en">Departure order even on a first offense</span></span></div><div class="it"><b><span class="ko">숙박업</span><span class="en">Lodging</span></b><span class="e"><span class="ko">예: 호텔·모텔·게스트하우스·펜션</span><span class="en">e.g. Hotel, motel, guesthouse, pension</span></span></div><div class="it"><b><span class="ko">노래방</span><span class="en">Karaoke (noraebang)</span></b><span class="e"><span class="ko">예: 노래연습장·유흥 관련 사업장</span><span class="en">e.g. Singing rooms; entertainment-related venues</span></span></div></div><h3 class="grp"><span class="ko">금지 상황</span><span class="en">Prohibited situations</span></h3><div class="ban"><div class="it"><b><span class="ko">거주 도시 밖 근무</span><span class="en">Work outside your city</span></b><span class="e"><span class="ko">예: 울산 거주 → 타 도시 근무</span><span class="en">e.g. Living in Ulsan → working in another city</span></span></div><div class="it"><b><span class="ko">허가 전 근무 시작</span><span class="en">Starting work before approval</span></b><span class="e"><span class="ko">승인 전 수습·시범근무도 절대 불가</span><span class="en">Even trial/probation work before approval is never allowed</span></span></div><div class="it"><b><span class="ko">허가 시간 초과 근무</span><span class="en">Working over allowed hours</span></b><span class="e"><span class="ko">예: 주중 25시간 허가 후 30시간 근무</span><span class="en">e.g. Approved 25 hrs/weekday but working 30</span></span></div><div class="it"><b><span class="ko">허가 장소 외 근무</span><span class="en">Working outside the approved place</span></b><span class="e"><span class="ko">예: 같은 사장님의 다른 지점 → 변경허가 필요</span><span class="en">e.g. Another branch of the same owner → change permit needed</span></span></div></div><h3 class="grp"><span class="ko">학생 처벌</span><span class="en">Penalties · students</span></h3><div class="pen"><span class="who"><span class="ko">학생</span><span class="en">Student</span></span><div class="t"><span class="ko">허가 없이 근무</span><span class="en">Working without a permit</span></div><div class="r"><span class="ko">① 최소 벌금 200만원 이상<br>② 범칙금 납부일로부터 1년간 시간제취업 신청 불가</span><span class="en">① Fine of at least KRW 2,000,000<br>② No part-time work applications for 1 year from the fine payment date</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">허가 신청 전 카페에서 근무 시작</span><span class="en">Started café work before applying</span></div><div class="e"><span class="ko">근거: 출입국관리법 제18조</span><span class="en">Basis: Immigration Act Art. 18</span></div></div><div class="pen"><span class="who"><span class="ko">학생</span><span class="en">Student</span></span><div class="t"><span class="ko">허가 조건 위반 (시간 초과 등)</span><span class="en">Breaching permit conditions (e.g., over-hours)</span></div><div class="r"><span class="ko">졸업 후 D-10 구직비자 변경이 제한될 수 있음</span><span class="en">May restrict change to a D-10 job-seeker visa after graduation</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">허가시간보다 더 많이 근무</span><span class="en">Working more than allowed</span></div><div class="e"><span class="ko">근거: 출입국관리법</span><span class="en">Basis: Immigration Act</span></div></div><div class="pen"><span class="who"><span class="ko">학생</span><span class="en">Student</span></span><div class="t"><span class="ko">금지업종 근무</span><span class="en">Working in a prohibited industry</span></div><div class="r"><span class="ko">불법취업으로 처리 (2차 적발 시 강제퇴거)</span><span class="en">Treated as illegal employment (deportation on second offense)</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">숙박업·노래방 근무</span><span class="en">Lodging or karaoke work</span></div><div class="e"><span class="ko">근거: 출입국관리법 제18조</span><span class="en">Basis: Immigration Act Art. 18</span></div></div><div class="pen"><span class="who"><span class="ko">학생</span><span class="en">Student</span></span><div class="t"><span class="ko">거주 도시 외 근무</span><span class="en">Working outside your city</span></div><div class="r"><span class="ko">허가 제한 또는 위반</span><span class="en">Permit restriction or violation</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">울산 거주 학생이 부산에서 근무</span><span class="en">Ulsan resident working in Busan</span></div></div><div class="pen hot"><span class="who"><span class="ko">학생</span><span class="en">Student</span></span><div class="t"><span class="ko">2차 적발</span><span class="en">Second offense</span></div><div class="r"><span class="ko">예외 없이 강제퇴거 원칙 (건설업은 1차부터 출국명령)</span><span class="en">Deportation as a rule, no exceptions (construction: departure order from the first offense)</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">1차 적발 후 재위반</span><span class="en">Re-offending after a first violation</span></div><div class="e"><span class="ko">근거: 출입국관리법</span><span class="en">Basis: Immigration Act</span></div></div><h3 class="grp"><span class="ko">고용주 처벌</span><span class="en">Penalties · employers</span></h3><div class="pen"><span class="who emp"><span class="ko">고용주</span><span class="en">Employer</span></span><div class="t"><span class="ko">허가 없이 유학생 고용</span><span class="en">Hiring a student without a permit</span></div><div class="r"><span class="ko">범칙금 500만원</span><span class="en">KRW 5,000,000 fine</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">시간제취업허가 없이 학생 채용</span><span class="en">Hiring a student with no permit</span></div><div class="e"><span class="ko">근거: 출입국관리법 제18조</span><span class="en">Basis: Immigration Act Art. 18</span></div></div><div class="pen"><span class="who emp"><span class="ko">고용주</span><span class="en">Employer</span></span><div class="t"><span class="ko">불법고용 처벌 이력</span><span class="en">History of illegal hiring</span></div><div class="r"><span class="ko">외국인 고용 제한</span><span class="en">Restriction on hiring foreigners</span></div><div class="e"><span class="ko">예:</span><span class="en">e.g.</span> <span class="ko">과거 불법고용 적발 사업장</span><span class="en">A business previously caught hiring illegally</span></div><div class="e"><span class="ko">근거: 출입국관리법</span><span class="en">Basis: Immigration Act</span></div></div></section><footer class="foot"><p><span class="ko"><b>문의</b> — 신청 전 반드시 울산과학대학교 국제교류원 사무실을 방문해 서류를 확인받으세요.</span><span class="en"><b>Inquiry</b> — Before applying, visit the Ulsan College Office of International Affairs in person and have your documents verified.</span></p><p class="fine"><span class="ko">본 가이드는 안내 목적의 요약 자료입니다. 실제 허가 여부는 개인 상황에 따라 달라질 수 있으며 규정은 변경될 수 있습니다.</span><span class="en">This guide is a summary for information only. Actual approval varies by individual circumstances and rules may change.</span></p></footer>
+</div>
+<a class="totop" id="totop" href="#top" aria-label="맨 위로 / Back to top"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 10l5-5 5 5"/></svg>TOP</a>
+
+<script>
+(function(){
+var root=document.documentElement;
+root.className+=' js';
+function $(s,c){return (c||document).querySelector(s)}
+function $$(s,c){return Array.prototype.slice.call((c||document).querySelectorAll(s))}
+function up(el,cls){while(el&&el!==document){if(el.classList&&el.classList.contains(cls))return el;el=el.parentNode}return null}
+function bi(ko,en){return '<span class="ko">'+ko+'</span><span class="en">'+en+'</span>'}
+function safe(fn){try{fn()}catch(e){if(window.console)console.error(e)}}
+
+/* 1) KO / EN */
+safe(function(){
+  var KEY='ptw-guide-lang';
+  function get(){try{return localStorage.getItem(KEY)}catch(e){return null}}
+  function put(v){try{localStorage.setItem(KEY,v)}catch(e){}}
+  function nav(){return $('.snav')}
+  /* 화면 맨 위에 보이던 요소를 기억했다가, 언어를 바꾼 뒤 같은 위치로 복원 */
+  function anchor(){
+    var n=nav(),top=n?n.getBoundingClientRect().bottom:0;
+    var cands=$$('.sec-h, .flow, .prog, .filt, .acc, .hcard, .note, .rules li, .pen, .ban .it, .foot');
+    var best=null;
+    for(var i=0;i<cands.length;i++){
+      var r=cands[i].getBoundingClientRect();
+      if(r.bottom>top+4){best=cands[i];break}
+    }
+    return best?{el:best,off:best.getBoundingClientRect().top-top}:null;
+  }
+  function restore(a){
+    if(!a)return;
+    var n=nav(),top=n?n.getBoundingClientRect().bottom:0;
+    var d=a.el.getBoundingClientRect().top-top-a.off;
+    if(Math.abs(d)>1)window.scrollBy(0,d);
+  }
+  function apply(l){
+    root.setAttribute('data-lang',l);root.setAttribute('lang',l);
+    $$('.lang button').forEach(function(b){b.setAttribute('aria-pressed',b.getAttribute('data-l')===l?'true':'false')});
+    document.title=l==='ko'?'시간제취업허가 가이드':'Part-time Work Permit Guide';
+    var tt=$('#totop');if(tt)tt.setAttribute('aria-label',l==='ko'?'맨 위로':'Back to top');
+  }
+  function set(l,save,keep){
+    var a=keep?anchor():null;
+    root.classList.add('switching');
+    apply(l);
+    if(save)put(l);
+    if(a){restore(a);if(window.requestAnimationFrame)requestAnimationFrame(function(){restore(a)})}
+    setTimeout(function(){root.classList.remove('switching')},60);
+    /* 현재 구간 표시 갱신 */
+    try{window.dispatchEvent(new Event('scroll'))}catch(e){}
+  }
+  var l=null;
+  try{var q=(location.search.match(/[?&]lang=(ko|en)/)||[])[1];if(q)l=q}catch(e){}
+  if(!l)l=get();
+  if(l!=='ko'&&l!=='en'){var nl=String(navigator.language||'ko').toLowerCase();l=nl.indexOf('ko')===0?'ko':'en'}
+  apply(l);
+  /* click과 touchend가 둘 다 오면 두 번 실행되지 않도록 한 번만 처리 */
+  $$('.lang button').forEach(function(b){
+    b.addEventListener('click',function(e){
+      e.preventDefault();
+      var v=b.getAttribute('data-l');
+      if(root.getAttribute('data-lang')===v)return;
+      set(v,true,true);
+    });
+  });
+});
+
+/* TOP 버튼 */
+safe(function(){
+  var tt=$('#totop');if(!tt)return;
+  var ticking=false;
+  function upd(){
+    ticking=false;
+    var y=window.pageYOffset||document.documentElement.scrollTop||0;
+    if(y>400)tt.classList.add('show');else tt.classList.remove('show');
+  }
+  window.addEventListener('scroll',function(){if(!ticking){ticking=true;(window.requestAnimationFrame||setTimeout)(upd)}},{passive:true});
+  tt.addEventListener('click',function(e){e.preventDefault();
+    var reduce=window.matchMedia&&window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    try{window.scrollTo({top:0,behavior:reduce?'auto':'smooth'})}catch(e){window.scrollTo(0,0)}
+    tt.blur();
+  });
+  upd();
+});
+
+/* 2) 아코디언 */
+function setOpen(card,open){
+  if(open)card.classList.add('open');else card.classList.remove('open');
+  var h=$('.acc-head',card);if(h)h.setAttribute('aria-expanded',open?'true':'false');
+}
+safe(function(){
+  $$('.acc-head').forEach(function(h){
+    h.setAttribute('aria-expanded','false');
+    h.addEventListener('click',function(){var c=up(h,'acc');setOpen(c,!c.classList.contains('open'))});
+  });
+  $$('[data-toggle-all]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var sec=document.getElementById(btn.getAttribute('data-toggle-all'));
+      var cards=$$('.acc',sec).filter(function(c){return !c.classList.contains('hide')});
+      var anyClosed=cards.some(function(c){return !c.classList.contains('open')});
+      cards.forEach(function(c){setOpen(c,anyClosed)});
+    });
+  });
+});
+
+/* 3) 체크박스 + 진행률 */
+function updateDiag(){
+  var sec=document.getElementById('s1');if(!sec)return;
+  var cards=$$('.acc',sec),n=cards.filter(function(c){return c.classList.contains('checked')}).length,t=cards.length;
+  var bar=$('#diag-bar'),cnt=$('#diag-cnt'),msg=$('#diag-msg'),box=$('#diag-prog');
+  if(bar)bar.style.width=Math.round(n/t*100)+'%';
+  if(cnt)cnt.textContent=n+' / '+t;
+  if(box){if(n===t)box.classList.add('done');else box.classList.remove('done')}
+  if(msg){
+    if(n===0)msg.innerHTML=bi('항목을 확인하고 체크하세요.','Review each item and tick it.');
+    else if(n===t)msg.innerHTML=bi('✅ 모두 확인했어요. 국제교류원에서 서류를 확인받으세요.','✅ All checked. Have your documents verified at the Office of International Affairs.');
+    else msg.innerHTML=bi((t-n)+'개 항목 남음',(t-n)+' item(s) left');
+  }
+}
+function updateDocs(){
+  var sec=document.getElementById('s3');if(!sec)return;
+  var cards=$$('.acc',sec).filter(function(c){return !c.classList.contains('hide')});
+  var n=cards.filter(function(c){return c.classList.contains('checked')}).length,t=cards.length;
+  var bar=$('#doc-bar'),cnt=$('#doc-cnt'),box=$('#doc-prog'),msg=$('#doc-msg');
+  if(bar)bar.style.width=(t?Math.round(n/t*100):0)+'%';
+  if(cnt)cnt.textContent=n+' / '+t;
+  if(box){if(t&&n===t)box.classList.add('done');else box.classList.remove('done')}
+  if(msg){
+    if(t&&n===t)msg.innerHTML=bi('✅ 서류 준비 완료','✅ All documents ready');
+    else msg.innerHTML=bi('준비한 서류를 체크하세요.','Tick each document as you prepare it.');
+  }
+}
+safe(function(){
+  $$('.chk').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var c=up(btn,'acc');var on=!c.classList.contains('checked');
+      if(on)c.classList.add('checked');else c.classList.remove('checked');
+      btn.setAttribute('aria-pressed',on?'true':'false');
+      if(up(c,'sec').id==='s1')updateDiag();else updateDocs();
+    });
+  });
+  $$('[data-reset]').forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var sec=document.getElementById(btn.getAttribute('data-reset'));
+      $$('.acc',sec).forEach(function(c){c.classList.remove('checked');var k=$('.chk',c);if(k)k.setAttribute('aria-pressed','false')});
+      if(sec.id==='s1')updateDiag();else updateDocs();
+    });
+  });
+  updateDiag();updateDocs();
+});
+
+/* 4) 서류 필터 */
+safe(function(){
+  var btns=$$('.fb');
+  btns.forEach(function(btn){
+    btn.addEventListener('click',function(){
+      var f=btn.getAttribute('data-f');
+      btns.forEach(function(x){x.setAttribute('aria-pressed',x===btn?'true':'false')});
+      $$('#s3 .acc').forEach(function(c){
+        var d2=c.getAttribute('data-d2'),d4=c.getAttribute('data-d4');
+        var show=f==='all'||(f==='d2'&&d2!=='na')||(f==='d4'&&d4!=='na');
+        if(show)c.classList.remove('hide');else c.classList.add('hide');
+      });
+      updateDocs();
+    });
+  });
+});
+
+/* 5) 온라인 / 방문 탭 */
+safe(function(){
+  var tabs=$$('.tab'),panes=$$('.pane');
+  tabs.forEach(function(t){
+    t.addEventListener('click',function(){
+      var k=t.getAttribute('data-k');
+      tabs.forEach(function(x){x.setAttribute('aria-selected',x===t?'true':'false')});
+      panes.forEach(function(pn){if(pn.getAttribute('data-k')===k)pn.classList.add('active');else pn.classList.remove('active')});
+    });
+  });
+});
+
+/* 6) 상단 메뉴 + 현재 위치 표시 */
+safe(function(){
+  var box=$('.snav-links'),links=$$('.snav-links a');
+  function activate(id){
+    links.forEach(function(a){
+      var on=a.getAttribute('href')==='#'+id;
+      if(on)a.classList.add('on');else a.classList.remove('on');
+      if(on&&box)box.scrollLeft=a.offsetLeft-(box.clientWidth-a.offsetWidth)/2;
+    });
+  }
+  links.forEach(function(a){
+    a.addEventListener('click',function(e){
+      var t=document.getElementById(a.getAttribute('href').slice(1));
+      if(t&&t.scrollIntoView){e.preventDefault();t.scrollIntoView({behavior:'smooth',block:'start'})}
+    });
+  });
+  if(!('IntersectionObserver' in window))return;
+  var io=new IntersectionObserver(function(es){
+    es.forEach(function(e){if(e.isIntersecting)activate(e.target.id)});
+  },{rootMargin:'-30% 0px -60% 0px'});
+  links.forEach(function(a){var s=document.getElementById(a.getAttribute('href').slice(1));if(s)io.observe(s)});
+});
+})();
+</script>
+</body>
+</html>
